@@ -1,4 +1,4 @@
-import pandas as pd 
+import pandas as pd
 import sys
 
 input_filename = sys.argv[1]
@@ -13,7 +13,7 @@ reason=[]
 for line in fhand:
     if "At time" in line:
         x=line.split('(')[0][25:]
-    if "shut in due" in line: 
+    if "shut in due" in line:
         if line.split()[2].startswith(well_prefix):
             well_name.append(line.split()[2])
             reason.append(line[line.find("shut in due"):].strip())
@@ -30,4 +30,4 @@ df_wells=pd.DataFrame({'Date':date, 'Well':well_name, 'ShutIn_Reason':reason})
 df_wells['Date']=pd.to_datetime(df_wells['Date'], dayfirst=True)
 
 df_wells.to_csv('Well_ShutIn_Reasons.csv',index=False)
-
+#delete this
