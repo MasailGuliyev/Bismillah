@@ -1,18 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jul  5 12:33:28 2020
-
-@author: gumnwe
-"""
-
-
-# -*- coding: utf-8 -*-
-"""
-Created on Fri May 29 15:01:30 2020
-
-@author: gumnwe
-"""
- 
 import pandas as pd 
 import sys
 
